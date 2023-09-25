@@ -3,14 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+    <title>Formulario</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico"  type="image/x-icon">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <h1>Meu Primeiro Formulario</h1>
+    <nav>
+        <ul type="disc">
+            <li><a href="index.html">Início</a></li>
+            <li>Eventos Games no Brasil</li>
+            <ul type="circle">
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="BGS.html">BGS</a></li>
+                <li><a href="campusPartyBrasil.html">campus Party Brasil</a></li>
+                <li><a href="gameXP.html">Game XP</a></li>
+                <li><a href="gamesCom.html">Games Com</a></li>
+            </ul>
+            
+            <li><a href="imagens.html">Galeria</a></li>    
+            <li><a href="Download.html"rel="prev">Downloads</a></li>
+            <li><a href="formulario.html">formulario</a></li>
+            <li><a href="faleConosco.html"rel="next">Fale Conosco</a></li>
+            
+        </ul>
+        <hr>
+
+    <h1>Responda o Formulario</h1>
+
+
     <form>
-        <p>Nome: <input type="text" name="nome" id="nome"></p>
-        <p>Sobrenome: <input type="text" name="sobrenome" id="sobrenome"></p>
-        <p><input type="submit" value="Enviar"></p>
+        <fieldset>
+                <legend>Coloque seus Dados</legend>
+                <p><label for="idTexto">Texto:</label><input type="text" name="nTexto" id="idTexto" size="40" placeholder="Um exemplo ou direcionamento para o usuário"></p>
+                <p><label for="idEmail">Email:</label><input type="email" name="nEmail" id="idEmail" placeholder="exemplo01@gmail.com"></p>
+                <p><label for="idData">Data:</label><input type="date" name="nData" id="idData"></p>
+                <p><label for="idSenha">Senha:</label><input type="password" name="nSenha" id="idSenha"></p>
+        </fieldset>
+        <fieldset>
+            <legend>Quanto você gosta de Games?</legend>
+            <label for="id1">Opções</label><br><input type="radio" name="IgualParaTodosOsRadioDeUmaMesmaEntrada" value="Opção 1" id="id1"><label
+                for="id1">Pouco</label>
+            <input type="radio" name="IgualParaTodosOsRadioDeUmaMesmaEntrada" value="Opção 2" id="id2"><label for="id2">Medio</label>
+            <input type="radio" name="IgualParaTodosOsRadioDeUmaMesmaEntrada" value="Opção 3" id="id3"><label for="id3">Muito</label>
+            <br>
+            <br>
+            <label for="idNum">Quantos Eventos você já foi?</label><br><input type="number" name="nNum" id="idNum" min="0" max="10">
+            <br>
+            <br>
+            <label for="idSelecao">Quais eventos já participou?</label><br>
+            <select name="nSelecao" id="idSelecao">
+                <option value="Coisa 1">BGS</option>
+                <option value="Coisa 2">GamesCom</option>
+                <option value="Coisa 3">CampusParty</option>
+                <option value="Coisa 4">Todos</option>
+                <option value="Coisa 5">Nenhum</option>
+            </select>
+            <br>
+            <br>    
+            <label for="idRange">Nivel de experiencia do evento </label><br><input type="range" min="1" max="10" name="nRange" id="idRange">
+            <br>
+            <br>
+            <label for="idCaixa">Escreva sua experiencia:</label><br><textarea type="text" cols="50" rows="10" placeholder="Digite aqui alguma coisa" name="nCaixa" id="idCaixa"></textarea><br>
+        </fieldset>
     </form>
 </body>
 </html>
